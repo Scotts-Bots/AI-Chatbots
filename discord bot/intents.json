@@ -1,0 +1,42 @@
+{"intents": [
+    {
+        "tag": "greetings",
+        "patterns": ["hi", "hello", "good day", "hey", "greetings"],
+        "responses": ["Hello!", "Hey", "Hi, how are you?"]
+    },
+    {
+        "tag": "goodbye",
+        "patterns": ["bye", "goodbye", "see you later", "check you later", "lukka", "goodnight", "adios amigo"],
+        "responses": ["Goodbye!", "See you later!"]
+    },
+    {
+        "tag": "casual_feeling",
+        "patterns": ["how are you?", "how you feeling?", "are you good?", "howzit"],
+        "responses": ["I am good thanks!", "I am well!"]
+    },
+    {
+        "tag": "name",
+        "patterns": [],
+        "responses": []
+    },
+    {
+        "tag": "location",
+        "patterns": [],
+        "responses": []
+    },
+    {
+        "tag": "fortnite",
+        "patterns": [],
+        "responses": []
+    },
+    {
+        "tag": "valorant",
+        "patterns": [],
+        "responses": []
+    },
+    {
+        "tag": "tristan",
+        "patterns": [],
+        "responses": []
+    }
+]}
