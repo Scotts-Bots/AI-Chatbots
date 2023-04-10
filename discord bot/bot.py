@@ -10,7 +10,7 @@ async def send_message(message, user_message, is_private):
         print(e)
 
 def log_message(message):
-    log_file = open('logs/message-logs.txt', mode='a')
+    log_file = open('../private-information/pugla-logs/message-logs.txt', mode='a')
     output = f'{message.created_at},{message.author},{message.channel},{message.content}\n'
     log_file.write(output)
     log_file.close()

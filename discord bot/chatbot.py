@@ -9,11 +9,11 @@ from nltk.stem import WordNetLemmatizer
 from keras.models import load_model
 
 lemmatizer = WordNetLemmatizer()
-intents = json.loads(open('model/intents.json').read())
+intents = json.loads(open('../private-information/pugla-intents.json').read())
 
-words = pickle.load(open('model/words.pkl', 'rb'))
-classes = pickle.load(open('model/classes.pkl', 'rb'))
-model = load_model('model/chatbotmodel.h5')
+words = pickle.load(open('model/words-pugla.pkl', 'rb'))
+classes = pickle.load(open('model/classes-pugla.pkl', 'rb'))
+model = load_model('model/chatbotmodel-pugla.h5')
 
 print("simple chatbot active...")
 
