@@ -9,11 +9,13 @@ from nltk.stem import WordNetLemmatizer
 from keras.models import load_model
 
 lemmatizer = WordNetLemmatizer()
-intents = json.loads(open('intents.json').read())
+intents = json.loads(open('model/intents.json').read())
 
-words = pickle.load(open('words.pkl', 'rb'))
-classes = pickle.load(open('classes.pkl', 'rb'))
-model = load_model('chatbotmodel.h5')
+words = pickle.load(open('model/words.pkl', 'rb'))
+classes = pickle.load(open('model/classes.pkl', 'rb'))
+model = load_model('model/chatbotmodel.h5')
+
+print("simple chatbot active...")
 
 def clean_up_sentence(sentence):
     sentence_words = nltk.word_tokenize(sentence)
@@ -49,8 +51,6 @@ def get_response(intents_list, intents_json):
             result = random.choice(i['responses'])
             break
     return result
-
-print("Bot is live. Start chatting!")
 
 def respond(message):
     ints = predict_class(message)

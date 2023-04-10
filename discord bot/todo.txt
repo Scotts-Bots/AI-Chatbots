@@ -1,0 +1,7 @@
+1. configure to activate / deactivate on specific responses
+
+2. specialized messages for each person
+3. live training
+4. create more intents - classes and responses
+5. record chat history with bot
+6. optimizations
