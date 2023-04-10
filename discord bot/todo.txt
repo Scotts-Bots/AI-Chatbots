@@ -1,7 +1,8 @@
-1. configure to activate / deactivate on specific responses
-5. record chat history with bot
-4. create more intents - classes and responses
-2. specialized messages for each person
+- configure to activate / deactivate on specific responses
+- record chat history with bot
+- create more intents - classes and responses
+- specialized messages for each person
 
-3. live training
-6. optimizations
+- live training
+- optimizations
+- command to clear chat

@@ -16,7 +16,7 @@ def handle_response(message) -> str:
     
     #TODO: Provide a comprehensive description of bot
     if p_message == '!info':
-        print("current version: v0.0.2")
+        return "current version: v0.0.2"
     
     #TODO: Provide a comprehensive list of commands for bot
     if p_message == "!help":
