@@ -29,6 +29,9 @@ def run_discord_bot():
         username = str(message.author)
         user_message = str(message.content)
         channel = str(message.channel)
+
+        #log message
+        log_message(message)
         
         #perform some validation checks
         if message.author == client.user:
@@ -38,9 +41,6 @@ def run_discord_bot():
         if user_message == '!kill':
             await client.close()
         print(f'{username} said: {user_message} in channel ({channel})')
-
-        #log message
-        log_message(message)
 
         #respond to message
         if user_message[0] == '?':
