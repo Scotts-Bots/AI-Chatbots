@@ -9,6 +9,12 @@ async def send_message(message, user_message, is_private):
     except Exception as e:
         print(e)
 
+def log_message(message):
+    log_file = open('logs/message-logs.txt', mode='a')
+    output = f'{message.created_at},{message.author},{message.channel},{message.content}\n'
+    log_file.write(output)
+    log_file.close()
+
 def run_discord_bot():
     TOKEN = json.loads(open('../private-information/discord-bots.json').read())['bots'][0]['token']
     client = discord.Client()
@@ -32,6 +38,9 @@ def run_discord_bot():
         if user_message == '!kill':
             await client.close()
         print(f'{username} said: {user_message} in channel ({channel})')
+
+        #log message
+        log_message(message)
 
         #respond to message
         if user_message[0] == '?':
