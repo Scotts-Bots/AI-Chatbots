@@ -30,13 +30,14 @@ def run_discord_bot():
         user_message = str(message.content)
         channel = str(message.channel)
 
+        if channel != 'botnis-everdeen':
+            return
+        
         #log message
         log_message(message)
         
         #perform some validation checks
         if message.author == client.user:
-            return
-        if channel != 'botnis-everdeen':
             return
         if user_message == '!kill':
             await client.close()

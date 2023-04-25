@@ -1,3 +1,5 @@
 /.idea
 /private-information
 /discord-bot/__pycache__
+/bert-discord-bot/data.ipynb
+
